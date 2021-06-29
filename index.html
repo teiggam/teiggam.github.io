@@ -1,1 +1,125 @@
 <html>
+​
+<head>
+    <link href="main.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="index.js" />
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        ​
+<div style ="padding-top: 40px; padding-bottom: 20px; padding-left: 25%; padding-right: 25%;">
+            <h1><center> Maggie Tamanini  || Software Developer </center></h1>
+    <div style="float: right; margin: 0px 0px 15px 15px; border:10px solid rgb(3, 31, 3);">
+
+            <img src="hogwartsme.jpg" width = "400px" alt="You're a wizard, Maggie!">
+
+    </div>
+    <h1>Introductions:</h1>
+    <p>
+    Maggie Tamanini is a software developer based in the Metro Detroit area.
+    </p>
+
+    <h1>Developing:</h1>
+    <p>
+        The path to a career in software development has not been short or easy.  Maggie started off her career in healthcare.  With a degree in biomedical sciences from Central Michigan University, there was a feeling of obligation to continue a career in medicine.  After college graduation, and a year-long internship, Maggie has spent her early career as a histotechnologist, working in a variety of pathology labs.  Though the field is intriguing, Maggie felt there was something missing.  Over and over again, she came back to her love of computers and web development.  In the middle of a global pandemic, she finally took the leap, head first into computer programming, enrolling in the full-time C# .Net Coding Bootcamp at <a href="https://grandcircus.co">Grand Circus</a>.
+    </p>
+
+    <h1>Hobbies:</h1>
+    <p> At her root, Maggie is a creative.  In her free time, she enjoys learning and mastering new crafts.  She spends the majority of her free time behind her Juki DU -1811N (an industrial sewing machine), bringing sewing projects to life.
+        <div id="imgGallary" class="container">
+           <center>
+
+               <div>
+                   <img src="1.jpg" height = "300px">
+                </div>
+                <div>
+                    <img src="2.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="3.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="4.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="5.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="6.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="7.jpg"height = "300px">
+                </div>
+                <div>
+                    <img src="8.jpg"height = "300px">
+                </div>
+            </center> 
+                
+          </div>
+    
+    </p>
+    <script>
+        (function(){
+                var imgLen = document.getElementById('imgGallary');
+                var images = imgLen.getElementsByTagName('img');
+                var counter = 1;
+        
+                if(counter <= images.length){
+                    setInterval(function(){
+                        images[0].src = images[counter].src;
+                        console.log(images[counter].src);
+                        counter++;
+        
+                        if(counter === images.length){
+                            counter = 1;
+                        }
+                    },4000);
+                }
+        })();
+        </script>
+    <h1>Hometown:</h1>
+    <p>
+        Maggie currently resides in Clawson, Michigan with her husband (Greg), kids (Luna and Miles), dog (Link), and cat (Willow).
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var test= {lat:  42.5369494, lng:  -83.1554032};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: test
+            });
+            var marker = new google.maps.Marker({
+              position: test,
+              map: map
+            });
+          }
+        </script>
+        <script async defer
+        src=
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyDSMX0ZKUSoykHwocVajVw2e2Gzy4Ql73Y&callback=initMap">
+        </script>
+
+    </p>
+
+</div>
+<div class ="footer">
+    Lab Rat turned Tech Geek
+</div>
+      
+
+
+
+</body>
+
+
+
+
+
+</html>
